@@ -1,0 +1,13 @@
+<!--- applicable credit cards--->
+<div class="tab-pane payu-cash-content pago-facil-content" id="pago-facil-content" role="tabpanel">
+    <fieldset class="payment-form-fields">
+        <!--- payment method is credit card --->
+        <input type="hidden" class="form-control"
+               name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+               value="PAGOFACIL"
+        >
+        <fieldset class="pago-efectivo-form">
+            <isinclude template="checkout/billing/paymentOptions/cobroExpress/cobroExpressForm" />
+        </fieldset>
+    </fieldset>
+</div>

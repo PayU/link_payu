@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment-settings xmlns="http://www.demandware.com/xml/impex/paymentsettings/2009-09-15">
+    <payment-method method-id="CREDIT_CARD">
+        <name xml:lang="x-default">Credit Card</name>
+        <enabled-flag>true</enabled-flag>
+        <processor-id>PAY_U</processor-id>
+    </payment-method>
+    <payment-method method-id="OTHERS_CASH">
+        <name xml:lang="x-default">OTHERS_CASH</name>
+        <enabled-flag>true</enabled-flag>
+        <processor-id>OTHERS_CASH</processor-id>
+        <ranges>
+            <range currency="COP">
+                <min-purchase-amount>1000</min-purchase-amount>
+                <max-purchase-amount>4000000</max-purchase-amount>
+            </range>
+        </ranges>
+    </payment-method>
+
+    <payment-method method-id="BANK_REFERENCED">
+        <name xml:lang="x-default">BANK_REFERENCED</name>
+        <enabled-flag>true</enabled-flag>
+        <processor-id>BANK_REFERENCED</processor-id>
+        <ranges>
+            <range currency="COP">
+                <min-purchase-amount>1</min-purchase-amount>
+            </range>
+        </ranges>
+    </payment-method>
+
+    <payment-method method-id="EFECTY">
+        <name xml:lang="x-default">EFECTY</name>
+        <enabled-flag>true</enabled-flag>
+        <processor-id>EFECTY</processor-id>
+        <ranges>
+            <range currency="COP">
+                <min-purchase-amount>20000</min-purchase-amount>
+                <max-purchase-amount>6000000</max-purchase-amount>
+            </range>
+        </ranges>
+    </payment-method>
+    <payment-card card-type="Visa">
+        <name xml:lang="x-default">Visa</name>
+        <enabled-flag>true</enabled-flag>
+        <card-number-settings>
+            <enable-checksum-verification>true</enable-checksum-verification>
+            <number-length>
+                <length>13</length>
+                <length>16</length>
+            </number-length>
+            <number-prefix>
+                <prefix>4</prefix>
+            </number-prefix>
+        </card-number-settings>
+        <security-code-length>3</security-code-length>
+    </payment-card>
+
+    <payment-card card-type="Amex">
+        <name xml:lang="x-default">American Express</name>
+        <enabled-flag>true</enabled-flag>
+        <card-number-settings>
+            <enable-checksum-verification>true</enable-checksum-verification>
+            <number-length>
+                <length>15</length>
+            </number-length>
+            <number-prefix>
+                <prefix>34</prefix>
+                <prefix>37</prefix>
+            </number-prefix>
+        </card-number-settings>
+        <security-code-length>4</security-code-length>
+    </payment-card>
+    <payment-card card-type="Master Card">
+        <name xml:lang="x-default">Master Card</name>
+        <enabled-flag>true</enabled-flag>
+        <card-number-settings>
+            <enable-checksum-verification>true</enable-checksum-verification>
+            <number-length>
+                <length>16</length>
+            </number-length>
+            <number-prefix>
+                <!-- Traditional MasterCard BIN range -->
+                <prefix>51</prefix>
+                <prefix>52</prefix>
+                <prefix>53</prefix>
+                <prefix>54</prefix>
+                <prefix>55</prefix>
+    
+                <!-- Extended range introduced in 2017 -->
+                <prefix>2221</prefix>
+                <prefix>2222</prefix>
+                <prefix>2223</prefix>
+                <prefix>2224</prefix>
+                <prefix>2225</prefix>
+                <prefix>2226</prefix>
+                <prefix>2227</prefix>
+                <prefix>2228</prefix>
+                <prefix>2229</prefix>
+                <prefix>223</prefix>
+                <prefix>224</prefix>
+                <prefix>225</prefix>
+                <prefix>226</prefix>
+                <prefix>227</prefix>
+                <prefix>228</prefix>
+                <prefix>229</prefix>
+                <prefix>23</prefix>
+                <prefix>24</prefix>
+                <prefix>25</prefix>
+                <prefix>26</prefix>
+                <prefix>270</prefix>
+                <prefix>271</prefix>
+                <prefix>2720</prefix>
+            </number-prefix>
+        </card-number-settings>
+        <security-code-length>3</security-code-length>
+    </payment-card>
+    <payment-card card-type="Diners">
+        <name xml:lang="x-default">DINERS</name>
+        <enabled-flag>true</enabled-flag>
+        <card-number-settings>
+            <enable-checksum-verification>true</enable-checksum-verification>
+            <number-length>
+                <length>14</length>
+                <length>16</length>
+            </number-length>
+            <number-prefix>
+                <!-- Diners Club International -->
+                <prefix>36</prefix>
+                <prefix>3600</prefix>
+                <prefix>3601</prefix>
+                <prefix>3602</prefix>
+                <prefix>3603</prefix>
+                <prefix>3604</prefix>
+                <prefix>3605</prefix>
+                <prefix>3606</prefix>
+                <prefix>3607</prefix>
+                <prefix>3608</prefix>
+                <prefix>3609</prefix>
+                <prefix>3610</prefix>
+                <prefix>3611</prefix>
+                <prefix>3612</prefix>
+                <prefix>3613</prefix>
+                <prefix>3614</prefix>
+                <prefix>3615</prefix>
+                <prefix>3616</prefix>
+                <prefix>3617</prefix>
+                <prefix>3618</prefix>
+                <prefix>3619</prefix>
+    
+                <!-- Diners Club Carte Blanche and Discover BINs -->
+                <prefix>38</prefix>
+                <prefix>3800</prefix>
+                <prefix>389</prefix>
+    
+                <!-- Newer Diners Club ranges overlapping with Discover -->
+                <prefix>39</prefix>
+                <prefix>3095</prefix>
+            </number-prefix>
+        </card-number-settings>
+        <security-code-length>3</security-code-length>
+    </payment-card>
+</payment-settings>

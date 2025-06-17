@@ -1,0 +1,40 @@
+
+
+<script type="text/javascript" src="https://maf.pagosonline.net/ws/fp/tags.js?id=${pdict.deviceSessionId}80200"></script>
+<noscript>
+   <iframe style="width: 100px; height: 100px; border: 0; position: absolute; top: -5000px;" src="https://maf.pagosonline.net/ws/fp/tags.js?id=${pdict.deviceSessionId}80200"></iframe>
+</noscript>
+
+<!--- applicable credit cards--->
+<div class="tab-pane active credit-card-content" id="credit-card-content" role="tabpanel">
+    <fieldset class="payment-form-fields" data-supported-cards="${JSON.stringify(pdict.order.billing.payment.applicablePaymentCards)}">
+        <!--- payment method is credit card --->
+        <input type="hidden" class="form-control"
+               name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+               value="CREDIT_CARD"
+        >
+
+        <!--- register/authenticated user --->
+        <isif condition="${pdict.customer.registeredUser}">
+            <div class="user-payment-instruments container ${pdict.customer.registeredUser && pdict.customer.customerPaymentInstruments.length ? '' : 'checkout-hidden'}">
+                <!--- Stored user payments --->
+                <div class="stored-payments">
+                    <isinclude template="checkout/billing/storedPaymentInstruments" />
+                </div>
+
+                <!--- Add new credit card button --->
+                <div class="row">
+                    <button class="btn btn-block add-payment btn-outline-primary" type="button">${Resource.msg('button.add.payment', 'checkout', null)}</button>
+                </div>
+            </div>
+        </isif>
+
+        <fieldset class="credit-card-form ${pdict.customer.registeredUser && pdict.customer.customerPaymentInstruments.length ? 'checkout-hidden' : ''}">
+            <isinclude template="checkout/billing/creditCardForm" />
+            <isif condition="${pdict.customer.registeredUser}">
+                <button class="btn btn-block cancel-new-payment btn-outline-primary ${pdict.customer.registeredUser && pdict.customer.customerPaymentInstruments.length ? '' : 'checkout-hidden'}" type="button">${Resource.msg('button.back.to.stored.payments', 'checkout', null)}</button>
+            </isif>
+        </fieldset>
+
+    </fieldset>
+</div>

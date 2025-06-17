@@ -1,0 +1,9 @@
+<li class="nav-item " data-method-id="${paymentOption.ID}">
+<iscomment> ${pdict.order.billing.payment.selectedPaymentInstruments[0].paymentMethod === paymentOption.ID ? 'active-tab' : ''} </iscomment>
+    <a class="pay-u-cash-tab checkboxPayUCash enabled-check arrows-accordion-payment arrows-accordion-payment-mobile collapsed ${paymentOption.ID + "-TAB"} ${paid}" data-toggle="collapse" href="#pago-efectivo-content" >
+        <div class="payu-payments payu-payment-card">
+            <img class="payment-image" src="${URLUtils.staticURL('/images/boleto-bancario.png')}" alt="${paymentOption.name}"
+                title="${paymentOption.name}" />
+        </div>
+    </a>
+</li>

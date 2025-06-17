@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+
+       <field formid="addressId" label="label.input.addressid" type="string" mandatory="true"
+              max-length="20" missing-error="error.message.required"
+              range-error="error.message.lessthan20" />
+       <field formid="firstName" label="label.input.firstname.profile" type="string"
+              mandatory="true" binding="firstName"
+              max-length="50" missing-error="error.message.required"
+              range-error="error.message.lessthan50" />
+       <field formid="lastName" label="label.input.lastname.profile" type="string" mandatory="true"
+              binding="lastName" max-length="50"
+              missing-error="error.message.required" range-error="error.message.lessthan50" />
+       <field formid="address1" label="label.input.address1" type="string" mandatory="true"
+              binding="address1" max-length="50"
+              missing-error="error.message.required" range-error="error.message.lessthan50" />
+       <field formid="address2" label="label.input.address2" type="string" mandatory="false"
+              binding="address2"
+              max-length="50" range-error="error.message.lessthan50" />
+       <field formid="city" label="label.input.city" type="string" mandatory="true" binding="city"
+              min-length="2"
+              max-length="50" missing-error="error.message.required"
+              range-error="error.message.lessthan50" />
+
+       <!--  postal code -->
+       <field formid="postalCode" label="label.input.zipcode" type="string" mandatory="true"
+              min-length="4" max-length="8"
+              binding="postalCode"
+              range-error="error.message.between5and10"
+              missing-error="error.message.required"
+              parse-error="error.message.parse.zip" />
+
+       <!-- use set of supported countries -->
+       <field formid="country" label="label.input.country" type="string" mandatory="true"
+              binding="countryCode"
+              missing-error="error.message.required">
+              <options>
+                     <option optionid="PE" label="select.option.country.peru" value="PE" />
+                     <option optionid="AR" label="select.option.country.argentina" value="AR" />
+                     <option optionid="BR" label="select.option.country.brazil" value="BR" />
+                     <option optionid="CL" label="select.option.country.chile" value="CL" />
+                     <option optionid="CO" label="select.option.country.colombia" value="CO" />
+                     <option optionid="MX" label="select.option.country.mexico" value="MX" />
+                     <option optionid="PA" label="select.option.country.panama" value="PA" />
+                     <option optionid="AU" label="select.option.country.australia" value="AU" />
+                     <option optionid="AT" label="select.option.country.austria" value="AT" />
+                     <option optionid="CA" label="select.option.country.canada" value="CA" />
+                     <option optionid="CN" label="select.option.country.china" value="CN" />
+                     <option optionid="DK" label="select.option.country.denmark" value="DK" />
+                     <option optionid="EG" label="select.option.country.egypt" value="EG" />
+                     <option optionid="FR" label="select.option.country.france" value="FR" />
+                     <option optionid="DE" label="select.option.country.germany" value="DE" />
+                     <option optionid="IN" label="select.option.country.india" value="IN" />
+                     <option optionid="ID" label="select.option.country.indonesia" value="ID" />
+                     <option optionid="IT" label="select.option.country.italy" value="IT" />
+                     <option optionid="JP" label="select.option.country.japan" value="JP" />
+                     <option optionid="NL" label="select.option.country.netherlands" value="NL" />
+                     <option optionid="NZ" label="select.option.country.newzealand" value="NZ" />
+                     <option optionid="PH" label="select.option.country.philippines" value="PH" />
+                     <option optionid="PL" label="select.option.country.poland" value="PL" />
+                     <option optionid="PT" label="select.option.country.portugal" value="PT" />
+                     <option optionid="RU" label="select.option.country.russia" value="RU" />
+                     <option optionid="SA" label="select.option.country.saudiarabia" value="SA" />
+                     <option optionid="SG" label="select.option.country.singapore" value="SG" />
+                     <option optionid="ES" label="select.option.country.spain" value="ES" />
+                     <option optionid="SE" label="select.option.country.sweden" value="SE" />
+                     <option optionid="CH" label="select.option.country.switzerland" value="CH" />
+                     <option optionid="TH" label="select.option.country.thailand" value="TH" />
+                     <option optionid="TR" label="select.option.country.turkey" value="TR" />
+                     <option optionid="GB" label="select.option.country.unitedkingdom" value="GB" />
+                     <option optionid="UY" label="select.option.country.uruguay" value="UY" />
+                     <option optionid="VE" label="select.option.country.venezuela" value="VE" />
+              </options>
+       </field>
+
+       <!-- use global state list -->
+       <include formid="states" name="states" missing-error="error.message.required"
+              parse-error="error.message.required" value-error="error.message.required" />
+
+       <!-- phone is mandatory for addresses -->
+       <field formid="phone" label="label.input.phonenumber" description="address.phone.example"
+              type="string" mandatory="true"
+              binding="phone" min-length="6" max-length="20"
+              missing-error="error.message.required"
+              range-error="error.message.between10and20"
+              parse-error="error.message.parse.phone" />
+
+       <!-- actions provided by the edit shipping address dialog -->
+       <action formid="apply" valid-form="true" />
+       <action formid="remove" valid-form="false" />
+</form>

@@ -1,0 +1,13 @@
+<!--- applicable credit cards--->
+<div class="tab-pane payu-cash-content efecty-content" id="efecty-content" role="tabpanel">
+    <fieldset class="payment-form-fields">
+        <!--- payment method is credit card --->
+        <input type="hidden" class="form-control"
+               name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+               value="EFECTY"
+        >
+        <fieldset class="pago-efectivo-form">
+            <isinclude template="checkout/billing/paymentOptions/efecty/efectyForm" />
+        </fieldset>
+    </fieldset>
+</div>

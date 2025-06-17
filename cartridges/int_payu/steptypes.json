@@ -1,0 +1,139 @@
+{
+    "step-types": {
+        "script-module-step": [
+            {
+                "@type-id": "custom.payUPaymentCapture",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "true",
+                "description": "PayU - Capture Payment if enableImmediateCapture is false.",
+                "module": "int_payu/cartridge/scripts/jobs/payUCaptureJob.js",
+                "function": "capturePayment",
+                "transactional": "true",
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        }
+                    ]
+                }
+            },
+            {
+              "@type-id": "custom.payUPaymentVoid",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "true",
+                "description": "PayU - Capture Payment if enableImmediateCapture is false.",
+                "module": "int_payu/cartridge/scripts/jobs/void.js",
+                "function": "execute",
+                "transactional": "true",
+                "parameters": {
+                    "parameters": [
+                        {
+                            "@name": "orderId",
+                            "@required": false,
+                            "@type": "string",
+                            "description": "Order ID"
+                        }
+                    ]
+                },
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        }
+                    ]
+                }  
+            },
+            {
+                "@type-id": "custom.payURefund",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "true",
+                "description": "PayU - Refund",
+                "module": "int_payu/cartridge/scripts/jobs/payURefund.js",
+                "function": "processRefund",
+                "transactional": "true",
+                "parameters": {
+                    "parameters": [
+                        {
+                            "@name": "orderId",
+                            "@required": false,
+                            "@type": "string",
+                            "description": "Order ID"
+                        },
+                        {
+                            "@name": "refundReason",
+                            "@required": false,
+                            "@type": "string",
+                            "description": "Refund Reason"
+                        }
+                    ]
+                },
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        }
+                    ]
+                }
+            },
+            {
+                "@type-id": "custom.payUPartialRefund",
+                "@supports-site-context": "true",
+                "@supports-organization-context": "true",
+                "description": "PayU - Refund",
+                "module": "int_payu/cartridge/scripts/jobs/payURefund.js",
+                "function": "processPartialRefund",
+                "transactional": "true",
+                "parameters": {
+                    "parameters": [
+                        {
+                            "@name": "orderId",
+                            "@required": false,
+                            "@type": "string",
+                            "description": "Order ID"
+                        },
+                        {
+                            "@name": "amount",
+                            "@required": true,
+                            "@type": "string",
+                            "description": "Refund Amount ( e.g 10.5 )",
+                            "default-value": "0.00"
+                        },
+                        {
+                            "@name": "refundReason",
+                            "@required": false,
+                            "@type": "string",
+                            "description": "Refund Reason"
+                        }
+                    ]
+                },
+                "status-codes": {
+                    "status": [
+                        {
+                            "@code": "ERROR",
+                            "description": "Used when an error occurred."
+                        },
+                        {
+                            "@code": "OK",
+                            "description": "Used when everything went well."
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

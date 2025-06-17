@@ -1,0 +1,64 @@
+<div class="payment-details ${payment.paymentMethod}">
+    <isloop items="${pdict.order.billing.payment.selectedPaymentInstruments}" var="payment">
+        <isif condition="${payment.paymentMethod === 'CREDIT_CARD' || payment.paymentMethod === 'PAY_U'}">
+            <isinclude template="checkout/billing/paymentOptions/creditCardSummary" />
+        </isif>
+
+        <isif condition="${payment.paymentMethod === 'PAY_U_CASH'}">
+            <isinclude template="checkout/billing/paymentOptions/payuCashSummary" />
+        </isif>
+
+        <isif condition="${payment.paymentMethod === 'YAPE'}">
+            <isinclude template="checkout/billing/paymentOptions/yapeSummary" />
+        </isif>
+
+        <isif condition="${payment.paymentMethod === 'BOLETO_BANCARIO'}">
+            <isinclude template="checkout/billing/paymentOptions/boletoBancario/boletoSummary" />
+        </isif>
+
+        <isif condition="${payment.paymentMethod === 'COBRO_EXPRESS'}">
+            <isinclude template="checkout/billing/paymentOptions/cobroExpress/cobroExpressSummary" />
+        </isif>
+
+        <isif condition="${payment.paymentMethod === 'PAGOFACIL'}">
+            <isinclude template="checkout/billing/paymentOptions/pagoFacil/pagoFacilSummary" />
+        </isif>
+
+        <isif condition="${payment.paymentMethod === 'RAPIPAGO'}">
+            <isinclude template="checkout/billing/paymentOptions/rapiPago/rapiPagoSummary" />
+        </isif>
+
+        <isif condition="${payment.paymentMethod === 'OXXO'}">
+            <isinclude template="checkout/billing/paymentOptions/oxxo/oxxoSummary" />
+        </isif>
+
+        <isif condition="${payment.paymentMethod === 'SEVEN_ELEVEN'}">
+            <isinclude template="checkout/billing/paymentOptions/sevenEleven/sevenElevenSummary" />
+        </isif>
+
+        <isif condition="${payment.paymentMethod === 'SPEI'}">
+            <isinclude template="checkout/billing/paymentOptions/spei/speiSummary" />
+        </isif>
+
+        <isif condition="${payment.paymentMethod === 'OTHERS_CASH_MX'}">
+            <isinclude template="checkout/billing/paymentOptions/otherCashMx/otherCashMxSummary" />
+        </isif>
+
+
+        <isif condition="${payment.paymentMethod === 'BANK_REFERENCED'}">
+            <isinclude template="checkout/billing/paymentOptions/bankReferenced/bankReferencedSummary" />
+        </isif>
+
+        <isif condition="${payment.paymentMethod === 'EFECTY'}">
+            <isinclude template="checkout/billing/paymentOptions/efecty/efectySummary" />
+        </isif>
+
+        <isif condition="${payment.paymentMethod === 'OTHERS_CASH'}">
+            <isinclude template="checkout/billing/paymentOptions/othersCash/othersCashSummary" />
+        </isif>
+        
+        <isif condition="${payment.paymentMethod === 'PAGOEFECTIVO'}">
+            <isinclude template="checkout/billing/paymentOptions/pagoEfectivo/pagoEfectivoSummary" />
+        </isif>
+    </isloop>
+</div>

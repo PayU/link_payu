@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="enableImmediateCapture">false</preference>
+            <preference preference-id="payUApiVersion">1.3.0</preference>
+            <preference preference-id="payUCardWiseInstallments">{
+"CHL": {
+    "Amex": [1,3,6,9,12],
+    "Master Card": [1,6,12,18],
+    "Visa": [1,3,6,12,18,24]
+  }
+}</preference>
+            <preference preference-id="payUCountry">CHL</preference>
+            <preference preference-id="payUEnableInstallments">true</preference>
+            <preference preference-id="payUEnvironment">test</preference>
+            <preference preference-id="payUInstallments">
+                <value>1</value>
+                <value>3</value>
+                <value>6</value>
+                <value>12</value>
+            </preference>
+            <preference preference-id="payULanguage">es</preference>
+            <preference preference-id="payUPaymentFlowType">1</preference>
+            <preference preference-id="payUProvider">PayULatam</preference>
+            <preference preference-id="payUSupportedDocumentTypes">{
+"CHL": [
+    { "type": "PP", "description": "Pasaporte", "value": "PP", "enabled": true },
+    { "type": "RUT", "description": "Rol Único Tributario", "value": "RUT", "enabled": true },
+    { "type": "RUN", "description": "Rol Único Nacional", "value": "RUN", "enabled": true },
+    { "type": "DNI", "description": "Documento Nacional de Identidad", "value": "DNI", "enabled": true },
+    { "type": "CI", "description": "Cédula de Identidad", "value": "CI", "enabled": false },
+    { "type": "DNIE", "description": "Documento Nacional de Identidad - Electrónico", "value": "DNIE", "enabled": false }
+  ]
+}</preference>
+            <preference preference-id="payUVoidAllowed">true</preference>
+            <preference preference-id="payu3DSConfiguration">DISABLED</preference>
+        </development>
+        <staging/>
+        <production/>
+    </custom-preferences>
+</preferences>

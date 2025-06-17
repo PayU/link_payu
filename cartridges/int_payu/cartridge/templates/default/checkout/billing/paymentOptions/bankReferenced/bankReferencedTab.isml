@@ -1,0 +1,17 @@
+<li class="nav-item " data-method-id="${paymentOption.ID}">
+<iscomment> ${pdict.order.billing.payment.selectedPaymentInstruments[0].paymentMethod === paymentOption.ID ? 'active-tab' : ''} </iscomment>
+    <a class="pay-u-cash-tab checkboxPayUCash enabled-check arrows-accordion-payment arrows-accordion-payment-mobile collapsed ${paymentOption.ID + "-TAB"} ${paid}" data-toggle="collapse" href="#bank-referenced-content" >
+        <div class="payu-payments payu-payment-card">
+            <isif condition="${paymentOption.country === 'COL'}">
+                <img class="payment-image" src="${URLUtils.staticURL('/images/bank_referenced_co_1.png')}" alt="${paymentOption.name}"
+                    title="${paymentOption.name}" />
+
+            <iselse>
+
+                <img class="payment-image" src="${URLUtils.staticURL('/images/bbva.png')}" alt="${paymentOption.name}"
+                    title="${paymentOption.name}" />
+            </isif>
+            
+        </div>
+    </a>
+</li>

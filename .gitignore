@@ -1,0 +1,13 @@
+node_modules/
+cartridges/int_payu/cartridge/static/**/css/
+cartridges/int_payu/cartridge/static/**/js/
+cartridges/int_payu/cartridge/static/**/fonts/
+cartridges/**/cartridge/static/**/images/compiled/
+cartridges/**/dw.json
+coverage/
+npm-debug.log
+dw.json
+.DS_Store
+.settings
+.vscode
+.idea

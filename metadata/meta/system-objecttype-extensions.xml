@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+
+    <type-extension type-id="Basket">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="payUPaymentId">
+                <display-name xml:lang="x-default">PayU Payment ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="pay_u_payment_status">
+                <display-name xml:lang="x-default">PayU Payment Status</display-name>
+                <description xml:lang="x-default">PayU Payment Status</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="sessionAddressBook">
+                <display-name xml:lang="x-default">Session Address Book</display-name>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Status">
+                <display-name xml:lang="x-default">Status</display-name>
+            </attribute-group>
+            <attribute-group group-id="payu">
+                <display-name xml:lang="x-default">PAYU</display-name>
+                <attribute attribute-id="payUPaymentId"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+
+    <type-extension type-id="Order">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="payUCashPaymentCode">
+                <display-name xml:lang="x-default">PayU Cash Payment Code</display-name>
+                <description xml:lang="x-default">PayU Cash Payment Code</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUPaymentId">
+                <display-name xml:lang="x-default">PayU Payment ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payURawResponse">
+                <display-name xml:lang="x-default">PayU Raw Response</display-name>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="pay_u_payment_status">
+                <display-name xml:lang="x-default">PayU Payment Status</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="pay_u_refund_amount">
+                <display-name xml:lang="x-default">PayU Refund Amount</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="pay_u_refund_id">
+                <display-name xml:lang="x-default">PayU Refund ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="pay_u_refund_reason">
+                <display-name xml:lang="x-default">PayU Refund Reason</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="pay_u_refund_status">
+                <display-name xml:lang="x-default">PayU Refund Status</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payuCaptureStatus">
+                <display-name xml:lang="x-default">PayU Payment Capture Status</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="payu">
+                <display-name xml:lang="x-default">PAYU</display-name>
+                <attribute attribute-id="payUPaymentId"/>
+                <attribute attribute-id="payuCaptureStatus"/>
+                <attribute attribute-id="pay_u_refund_status"/>
+                <attribute attribute-id="pay_u_refund_amount"/>
+                <attribute attribute-id="pay_u_refund_id"/>
+                <attribute attribute-id="pay_u_refund_reason"/>
+                <attribute attribute-id="pay_u_payment_status"/>
+                <attribute attribute-id="payURawResponse"/>
+                <attribute attribute-id="payUCashPaymentCode"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="OrderAddress">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="documentNumber">
+                <display-name xml:lang="x-default">Document Number</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="documentType">
+                <display-name xml:lang="x-default">DocumentType</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="payUFields">
+                <display-name xml:lang="x-default">PayU Fields</display-name>
+                <attribute attribute-id="documentType"/>
+                <attribute attribute-id="documentNumber"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="OrderPaymentInstrument">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="payUAuthorizationId">
+                <display-name xml:lang="x-default">PayU Authorization Id</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUCIP">
+                <display-name xml:lang="x-default">PAYU CIP</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUCardInstallments">
+                <display-name xml:lang="x-default">PayU Card Installments</display-name>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUCardSecurityCode">
+                <display-name xml:lang="x-default">PayU Card Security Code</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUCashExpiration">
+                <display-name xml:lang="x-default">PayU Cash Expiration</display-name>
+                <description xml:lang="x-default">PayU Cash Expiration</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUCashExpiry">
+                <display-name xml:lang="x-default">PayU CASH EXPIRY</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUCashPdfUrl">
+                <display-name xml:lang="x-default">PayU Cash PDF Url</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUCashReceiptHtmlUrl">
+                <display-name xml:lang="x-default">PAYU CASH RECEIPT HTML URL</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUCashReceiptPdfUrl">
+                <display-name xml:lang="x-default">PAYU CASH RECEIPT PDF URL</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUOrderId">
+                <display-name xml:lang="x-default">PayU Order ID</display-name>
+                <description xml:lang="x-default">PayU Order ID</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUPaymentId">
+                <display-name xml:lang="x-default">PayU Payment Id</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUCardVendor">
+                <display-name xml:lang="x-default">PayU Card Vendor</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUProviderAuthorizationCode">
+                <display-name xml:lang="x-default">PayU Network Authorization Code</display-name>
+                <description xml:lang="x-default">PayU Network Authorization Code</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUProviderDescription">
+                <display-name xml:lang="x-default">PayU Provider Description</display-name>
+                <description xml:lang="x-default">PayU Provider Description</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUProviderName">
+                <display-name xml:lang="x-default">PayU Provider Name</display-name>
+                <description xml:lang="x-default">PayU Provider Name</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUProviderNetworkName">
+                <display-name xml:lang="x-default">PayU Provider Network Name</display-name>
+                <description xml:lang="x-default">PayU Provider Network Name</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUProviderNetworkResponseCode">
+                <display-name xml:lang="x-default">PayU Provider Network Response Code</display-name>
+                <description xml:lang="x-default">PayU Provider Network Response Code</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUProviderNetworkResponseMessage">
+                <display-name xml:lang="x-default">PayU Provider Network Response Message</display-name>
+                <description xml:lang="x-default">PayU Provider Network Response Message</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUProviderOperationDate">
+                <display-name xml:lang="x-default">PayU Provider Operation Date</display-name>
+                <description xml:lang="x-default">PayU Provider Operation Date</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUProviderResponseCode">
+                <display-name xml:lang="x-default">PayU Provider Response Code</display-name>
+                <description xml:lang="x-default">PayU Provider Response Code</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUProviderTransactionId">
+                <display-name xml:lang="x-default">PayU Provider Transaction Id</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUReconciliationId">
+                <display-name xml:lang="x-default">PayU Reconciliation Id</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUTrazabilityCode">
+                <display-name xml:lang="x-default">PayU Traceability Code</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUdeviceSessionId">
+                <display-name xml:lang="x-default">PayU Device Session ID</display-name>
+                <description xml:lang="x-default">PayU Device Session ID</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="yapeCode">
+                <display-name xml:lang="x-default">Yape Code</display-name>
+                <description xml:lang="x-default">Yape Code</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="yapePhoneNumber">
+                <display-name xml:lang="x-default">Yape Phone Number</display-name>
+                <description xml:lang="x-default">Yape Phone Number</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="payu">
+                <display-name xml:lang="x-default">PayU</display-name>
+                <attribute attribute-id="payUCashReceiptPdfUrl"/>
+                <attribute attribute-id="payUCashReceiptHtmlUrl"/>
+                <attribute attribute-id="payUCIP"/>
+                <attribute attribute-id="payUCardSecurityCode"/>
+                <attribute attribute-id="payUPaymentId"/>
+                <attribute attribute-id="payUAuthorizationId"/>
+                <attribute attribute-id="payUProviderTransactionId"/>
+                <attribute attribute-id="payUReconciliationId"/>
+                <attribute attribute-id="payUProviderName"/>
+                <attribute attribute-id="payUProviderResponseCode"/>
+                <attribute attribute-id="payUProviderDescription"/>
+                <attribute attribute-id="payUOrderId"/>
+                <attribute attribute-id="payUProviderOperationDate"/>
+                <attribute attribute-id="payUProviderAuthorizationCode"/>
+                <attribute attribute-id="payUProviderNetworkResponseCode"/>
+                <attribute attribute-id="payUProviderNetworkName"/>
+                <attribute attribute-id="payUProviderNetworkResponseMessage"/>
+                <attribute attribute-id="payUCashExpiration"/>
+                <attribute attribute-id="yapePhoneNumber"/>
+                <attribute attribute-id="yapeCode"/>
+                <attribute attribute-id="payUCardVendor"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+
+    <type-extension type-id="Profile">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="payUCustomerId">
+                <display-name xml:lang="x-default">payUCustomerId</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="payu">
+                <display-name xml:lang="x-default">PayU</display-name>
+                <attribute attribute-id="payUCustomerId"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            
+            <attribute-definition attribute-id="enableImmediateCapture">
+                <display-name xml:lang="x-default">PayU Enable Immediate Capture Payment</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>true</default-value>
+            </attribute-definition>
+    
+            <attribute-definition attribute-id="enableInfiniteScroll">
+                <display-name xml:lang="x-default">Enable Infinite Scroll</display-name>
+                <description xml:lang="x-default">This Boolean toggles the option for infinite scrolling or pagination from within the search grid.</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+    
+    
+            <attribute-definition attribute-id="payUApiVersion">
+                <display-name xml:lang="x-default">PayU API Version</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>1.3.0</default-value>
+            </attribute-definition>
+    
+    
+            <attribute-definition attribute-id="payUAppId">
+                <display-name xml:lang="x-default">PayU App ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+    
+    
+            <attribute-definition attribute-id="payUCardWiseInstallments">
+                <display-name xml:lang="x-default">payUCardWiseInstallments</display-name>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+    
+            <attribute-definition attribute-id="payUCashExpiryDays">
+                <display-name xml:lang="x-default">PayU Cash Payment Expiration Time ( In Days )</display-name>
+                <type>enum-of-int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">1</display>
+                        <value>1</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">2</display>
+                        <value>2</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">3</display>
+                        <value>3</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">4</display>
+                        <value>4</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">5</display>
+                        <value>5</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">6</display>
+                        <value>6</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">7</display>
+                        <value>7</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">8</display>
+                        <value>8</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">9</display>
+                        <value>9</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">10</display>
+                        <value>10</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">11</display>
+                        <value>11</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">12</display>
+                        <value>12</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">13</display>
+                        <value>13</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">14</display>
+                        <value>14</value>
+                    </value-definition>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">15</display>
+                        <value>15</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUCountry">
+                <display-name xml:lang="x-default">PayU Country</display-name>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Peru</display>
+                        <value>PER</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Mexico</display>
+                        <value>MEX</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Colombia</display>
+                        <value>COL</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Chile</display>
+                        <value>CHL</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Argentina</display>
+                        <value>ARG</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Brazil</display>
+                        <value>BRA</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Panama</display>
+                        <value>PAN</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUEnableInstallments">
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUEnvironment">
+                <display-name xml:lang="x-default">PayU Environment</display-name>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">Test</display>
+                        <value>test</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Live</display>
+                        <value>live</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUInstallments">
+                <display-name xml:lang="x-default">PayU Installments ( Cards )</display-name>
+                <description xml:lang="x-default">PayU Installments</description>
+                <type>set-of-int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="payULanguage">
+                <display-name xml:lang="x-default">PayU Language</display-name>
+                <description xml:lang="x-default">PayU Language</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">English</display>
+                        <value>en</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Spanish</display>
+                        <value>es</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Portuguese</display>
+                        <value>pt</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUPaymentFlowType">
+                <display-name xml:lang="x-default">PayU Payment Flow Type</display-name>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">One Step ( Charge )</display>
+                        <value>1</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Two Step ( Authorization &amp; Capture )</display>
+                        <value>2</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUPrivateKey">
+                <display-name xml:lang="x-default">PayU Private Key</display-name>
+                <description xml:lang="x-default">PayU Private Key</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUProvider">
+                <display-name xml:lang="x-default">PayU Provider</display-name>
+                <description xml:lang="x-default">PayU Provider</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUPublicKey">
+                <display-name xml:lang="x-default">PayU Public Key</display-name>
+                <description xml:lang="x-default">PayU Public Key</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUSupportedDocumentTypes">
+                <display-name xml:lang="x-default">PayU Supported Document Types</display-name>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="payUVoidAllowed">
+                <display-name xml:lang="x-default">PayU Void Allowed?</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="payu3DSConfiguration">
+                <display-name xml:lang="x-default">PayU 3DS Configurations</display-name>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">DISABLED</display>
+                        <value>DISABLED</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">ENABLED</display>
+                        <value>ENABLED</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">INTERNAL</display>
+                        <value>INTERNAL</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="payu">
+                <display-name xml:lang="x-default">PayU</display-name>
+                <attribute attribute-id="payUPublicKey"/>
+                <attribute attribute-id="payUPrivateKey"/>
+                <attribute attribute-id="payUAppId"/>
+                <attribute attribute-id="payUProvider"/>
+                <attribute attribute-id="payUApiVersion"/>
+                <attribute attribute-id="payUCountry"/>
+                <attribute attribute-id="payULanguage"/>
+                <attribute attribute-id="payUEnvironment"/>
+                <attribute attribute-id="payUPaymentFlowType"/>
+                <attribute attribute-id="enableImmediateCapture"/>
+                <attribute attribute-id="payUVoidAllowed"/>
+                <attribute attribute-id="payUSupportedDocumentTypes"/>
+                <attribute attribute-id="payUEnableInstallments"/>
+                <attribute attribute-id="payUCardWiseInstallments"/>
+                <attribute attribute-id="payUInstallments"/>
+                <attribute attribute-id="payu3DSConfiguration"/>
+                <attribute attribute-id="payUCashExpiryDays"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

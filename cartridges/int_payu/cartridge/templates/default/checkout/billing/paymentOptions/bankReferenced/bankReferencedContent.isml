@@ -1,0 +1,13 @@
+<!--- applicable credit cards--->
+<div class="tab-pane payu-cash-content bank-referenced-content" id="bank-referenced-content" role="tabpanel">
+    <fieldset class="payment-form-fields">
+        <!--- payment method is credit card --->
+        <input type="hidden" class="form-control"
+               name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+               value="BANK_REFERENCED"
+        >
+        <fieldset class="pago-efectivo-form">
+            <isinclude template="checkout/billing/paymentOptions/bankReferenced/bankReferencedForm" />
+        </fieldset>
+    </fieldset>
+</div>

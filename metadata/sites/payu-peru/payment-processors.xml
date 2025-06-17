@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment-processors xmlns="http://www.demandware.com/xml/impex/paymentprocessor/2007-03-31">
+  
+
+    <payment-processor processor-id="PAGOEFECTIVO">
+        <description>PAGOEFECTIVO</description>
+        <preferences>
+            <all-instances/>
+            <development/>
+            <staging/>
+            <production/>
+        </preferences>
+    </payment-processor>
+
+
+
+    <payment-processor processor-id="PAY_U">
+        <description>PayU Payment Processor</description>
+        <preferences>
+            <all-instances/>
+            <development/>
+            <staging/>
+            <production/>
+        </preferences>
+    </payment-processor>
+
+    <payment-processor processor-id="YAPE">
+        <description>Yape - eWallet</description>
+        <preferences>
+            <all-instances/>
+            <development/>
+            <staging/>
+            <production/>
+        </preferences>
+    </payment-processor>
+
+</payment-processors>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+
+       <field formid="documentType" 
+              label="label.input.document.type" 
+              type="string" mandatory="true" 
+              binding="documentType" 
+              missing-error="payment.document.type.missing" 
+              value-error="address.field.invalid"
+       >
+              <options>
+                     <option optionid="" label="" value="" />
+                     <option optionid="PP" label="label.document.passport" value="PP" />
+                     <option optionid="DE" label="label.document.de" value="DE" />
+                     <option optionid="DNI" label="label.document.dni" value="DNI" />
+              </options>
+       </field>
+
+       <field formid="documentNumber"
+              label="label.input.document.number"
+              type="string" mandatory="true" binding="documentNumber"
+              max-length="20"
+              missing-error="error.message.required"
+              parse-error="error.message.not.numbers"/>
+
+       <field formid="yapePhoneNumber"
+              label="label.input.yapePhoneNumber"
+              description="address.yapePhoneNumber.example"
+              type="string" mandatory="true"
+              binding="yapePhoneNumber" min-length="9" max-length="9" pattern="^\d{9}$"
+              missing-error="error.message.required"
+              range-error="error.message.exact9digits"
+              parse-error="error.message.parse.yapePhoneNumber"/>
+
+       <field
+              formid="yapeCode" label="label.input.yapeCode"
+              description="address.yapeCode.example"
+              type="string" mandatory="true"
+              binding="yapeCode" min-length="6" max-length="6" pattern="^\d{9}$"
+              missing-error="error.message.required"
+              range-error="error.message.exact6digits"
+              parse-error="error.message.parse.yapeCode"/>
+
+</form>

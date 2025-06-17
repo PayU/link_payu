@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences xmlns="http://www.demandware.com/xml/impex/preferences/2007-03-31">
+    <custom-preferences>
+        <all-instances/>
+        <development>
+            <preference preference-id="enableImmediateCapture">true</preference>
+            <preference preference-id="payUApiVersion">1.3.0</preference>
+            <preference preference-id="payUCardWiseInstallments">{
+
+"MEX": {
+    "Amex": [1,3,6,9,12],
+    "Master Card": [1,6,12,18],
+    "Visa": [1,3,6,12,18,24]
+  } 
+
+}</preference>
+            <preference preference-id="payUCashExpiryDays">7</preference>
+            <preference preference-id="payUCountry">MEX</preference>
+            <preference preference-id="payUEnableInstallments">true</preference>
+            <preference preference-id="payUEnvironment">test</preference>
+            <preference preference-id="payUInstallments">
+                <value>3</value>
+                <value>6</value>
+                <value>9</value>
+                <value>12</value>
+                <value>18</value>
+            </preference>
+            <preference preference-id="payULanguage">es</preference>
+            <preference preference-id="payUPaymentFlowType">2</preference>
+            <preference preference-id="payUProvider">PayULatam</preference>
+            <preference preference-id="payUSupportedDocumentTypes">{
+"MEX": [
+    { "type": "PP", "description": "Pasaporte", "value": "PP", "enabled": true },
+    { "type": "CEP", "description": "Comprobante Electrónico de Pago", "value": "CEP", "enabled": false },
+    { "type": "CURP", "description": "Clave Única de Registro de Población", "value": "CURP", "enabled": false },
+    { "type": "IFE", "description": "Instituto Federal Electoral", "value": "IFE", "enabled": false },
+    { "type": "RFC", "description": "Registro Federal de Contribuyentes", "value": "RFC", "enabled": false },
+    { "type": "SIEM", "description": "Sistema de Información Empresarial Mexicano", "value": "SIEM", "enabled": false }
+  ]
+}</preference>
+            <preference preference-id="payUVoidAllowed">true</preference>
+            <preference preference-id="payu3DSConfiguration">DISABLED</preference>
+        </development>
+        <staging/>
+        <production/>
+    </custom-preferences>
+</preferences>

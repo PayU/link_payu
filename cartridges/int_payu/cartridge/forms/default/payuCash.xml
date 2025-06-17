@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+    <field formid="paymentMethod" type="string" mandatory="true" />
+    <field formid="deviceSessionId" label="profile.deviceSessionId" type="string" mandatory="true" binding="deviceSessionId" />
+    <!-- <include formid="documentFields" name="documentFields"/> -->
+
+     <field formid="documentType" label="label.input.document.type" type="string" mandatory="true" binding="documentType" missing-error="payment.document.type.missing" value-error="address.field.invalid">
+        <options>
+            <option optionid="" label="" value="" />
+            <option optionid="PP" label="label.document.passport" value="PP" />
+            <option optionid="DE" label="label.document.de" value="DE" />
+            <option optionid="DNI" label="label.document.dni" value="DNI" />
+        </options>
+    </field>
+
+    <field 
+        formid="documentNumber" 
+        label="label.input.document.number" 
+        type="string" mandatory="true" binding="documentNumber" 
+        max-length="20" 
+        missing-error="error.message.required" 
+        parse-error="error.message.not.numbers"
+    />
+
+    <validation 
+            if="{documentType} == 'DNI'" 
+            type="regexp" 
+            value="^\d{8}$" 
+            value-error="error.message.invalid.dni"
+        />
+</form>

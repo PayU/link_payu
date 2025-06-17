@@ -1,0 +1,78 @@
+<div class="payu-cash">
+    <!-- Payment Logo -->
+    <div class="payu-cash__logo-container my-2">
+<iscomment> TO-DO : Update SVG </iscomment>
+    <iscomment> <b>BOLETO BANCARIO</b> </iscomment>
+        <img 
+            class="payu-cash__logo" 
+            src="${URLUtils.staticURL('/images/cobro-express.png')}" 
+            alt="${payment.type} logo" 
+            loading="lazy" 
+        />
+    </div>
+
+    <!-- Payment Information -->
+    <div class="payu-cash__info-container pl-2 ${JSON.stringify(pdict.order.billing.payment.payUCash)}">
+        <div class="payu-cash__amount-info">
+            
+            <!-- Payment Code -->
+            <isif condition="${pdict.order.billing.payment.payUCash && pdict.order.billing.payment.payUCash.payUCIP != ''}">
+                <div class="payu-cash__info">
+                    <span class="payu-cash__label">
+                        ${Resource.msg('label.payu.cash.cip','payu',null)}:
+                    </span> 
+                    <span class="payu-cash__value font-weight-bold">
+                        ${pdict.order.billing.payment.payUCash.payUCIP}
+                    </span>
+                </div>
+            </isif>
+
+            <!-- Payment Amount -->
+            <div class="payu-cash__info">
+                <span class="payu-cash__label">
+                    ${Resource.msg('label.payu.cash.amount','payu',null)}:
+                </span> 
+                <span class="payu-cash__value font-weight-bold">
+                    ${payment.formattedAmount}
+                </span>
+            </div>
+
+            <isif condition="${pdict.order.billing.payment.payUCash && pdict.order.billing.payment.payUCash.payUExternalId && pdict.order.billing.payment.payUCash.payUExternalId != ''}">
+                <div class="payu-cash__info">
+                    <span class="payu-cash__label">
+                        ${Resource.msg('label.payu.cash.externalId','payu',null)}:
+                    </span> 
+                    <span class="payu-cash__value font-weight-bold">
+                        ${pdict.order.billing.payment.payUCash.payUExternalId}
+                    </span>
+                </div>
+            </isif>
+        </div>
+
+        <!-- Payment Expiry and Receipt -->
+        <div class="payu-cash__expiry-info-default ">
+            <span class="payu-cash-default-expiry ${payment.payUCashExpiry && !(pdict.order.billing.payment.payUCash && pdict.order.billing.payment.payUCash.payUCashExpirationFormatted != '') ? '' : 'd-none' }">
+                ${Resource.msgf('label.payu.cash.expiry.default','payu',null, payment.payUCashExpiry)}
+            </span>
+
+            <isif condition="${pdict.order.billing.payment.payUCash && pdict.order.billing.payment.payUCash.payUCashExpirationFormatted != ''}">
+                <span class="payu-cash-expiry">
+                    ${Resource.msgf('label.payu.cash.expiry','payu',null, pdict.order.billing.payment.payUCash.payUCashExpirationFormatted)}
+                </span>
+            </isif>
+            
+
+            <!-- Receipt Download Link -->
+            <isif condition="${pdict.order.billing.payment.payUCash && pdict.order.billing.payment.payUCash.payUCashReceiptPdfUrl != ''}">
+                <br/>
+                <span class="payu-cash__receipt">
+                    <a href="${pdict.order.billing.payment.payUCash.payUCashReceiptPdfUrl}">
+                        ${Resource.msg('label.payu.cash.pdf','payu',null)}
+                    </a>
+                </span>
+            </isif>
+        </div>
+    </div>
+</div>
+
+<isinclude template="checkout/billing/paymentOptions/cashPaymentStatus" />

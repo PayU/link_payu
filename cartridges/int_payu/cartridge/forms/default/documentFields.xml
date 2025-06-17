@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+    <field formid="documentType" label="label.input.document.type" type="string" mandatory="true" binding="documentType" missing-error="payment.document.type.missing" value-error="address.field.invalid">
+        <options>
+            <option optionid="" label="" value="" />
+            <option optionid="DNI" label="DNI" value="DNI" />
+            <option optionid="DNIE" label="DNIE" value="DNIE" />
+            <option optionid="DE" label="DE" value="DE" />
+            <option optionid="EIN" label="EIN" value="EIN" />
+            <option optionid="RUC" label="RUC" value="RUC" />
+            <option optionid="CE" label="CE" value="CE" />
+            <!-- TO-DO -->
+            <!-- passport - pp, de, dni - labels --> 
+        </options>
+    </field>
+
+    <field formid="documentNumber" label="label.input.document.number" type="integer" mandatory="true" binding="documentNumber" max-length="255" missing-error="payment.document.number.missing" parse-error="error.message.not.numbers" regexp="^[a-zA-Z\u00C0-\u00FF\s-]*$"/>
+</form>

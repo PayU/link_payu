@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jobs xmlns="http://www.demandware.com/xml/impex/jobs/2015-07-01">
+
+    <job job-id="PAYU_VOID">
+        <description>PayU Job to Void Payment</description>
+        <parameters/>
+        <flow>
+            <context site-id="payu-peru"/>
+            <step step-id="custom.payUPaymentVoid" type="custom.payUPaymentVoid" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="orderId">00000</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2025-04-10Z</date>
+                <time>13:29:00.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="PAYU_PARTIAL_REFUND">
+        <description>Job for Partial Refund</description>
+        <parameters/>
+        <flow>
+            <context site-id="payu-peru"/>
+            <step step-id="custom.payUPartialRefund" type="custom.payUPartialRefund" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="orderId">000000</parameter>
+                    <parameter name="amount">0.0</parameter>
+                    <parameter name="refundReason">Customer's Request</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2025-04-29Z</date>
+                <time>05:52:00.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="PAYU_REFUND">
+        <description>PAYU Job to initiate refund</description>
+        <parameters/>
+        <flow>
+            <context site-id="payu-peru"/>
+            <step step-id="custom.payURefund" type="custom.payURefund" enforce-restart="false">
+                <description/>
+                <parameters>
+                    <parameter name="orderId">000000</parameter>
+                    <parameter name="refundReason">Customer's Request</parameter>
+                </parameters>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="false">
+                <date>2025-03-17Z</date>
+                <time>08:24:00.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+    <job job-id="PAYU_CAPTURE_PAYMENT">
+        <description/>
+        <parameters/>
+        <flow>
+            <context site-id="payu-peru"/>
+            <step step-id="custom.payUPaymentCapture" type="custom.payUPaymentCapture" enforce-restart="false">
+                <description/>
+                <parameters/>
+            </step>
+        </flow>
+        <rules/>
+        <triggers>
+            <run-once enabled="true">
+                <date>2025-03-13Z</date>
+                <time>10:57:00.000Z</time>
+            </run-once>
+        </triggers>
+    </job>
+
+</jobs>

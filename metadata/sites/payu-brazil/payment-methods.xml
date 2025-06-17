@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment-settings xmlns="http://www.demandware.com/xml/impex/paymentsettings/2009-09-15">
+
+    <payment-method method-id="CREDIT_CARD">
+        <name xml:lang="x-default">Credit Card</name>
+        <enabled-flag>true</enabled-flag>
+        <processor-id>PAY_U</processor-id>
+    </payment-method>
+
+    <payment-method method-id="BOLETO_BANCARIO">
+        <name xml:lang="x-default">BOLETO_BANCARIO</name>
+        <enabled-flag>true</enabled-flag>
+        <processor-id>BOLETO_BANCARIO</processor-id>
+        <ranges>
+            <range currency="BRL">
+                <min-purchase-amount>1</min-purchase-amount>
+                <max-purchase-amount>10000</max-purchase-amount>
+            </range>
+        </ranges>
+    </payment-method>
+
+    <payment-card card-type="Visa">
+        <name xml:lang="x-default">Visa</name>
+        <enabled-flag>true</enabled-flag>
+        <card-number-settings>
+            <enable-checksum-verification>true</enable-checksum-verification>
+            <number-length>
+                <length>13</length>
+                <length>16</length>
+                <length>19</length> <!-- Some Visa cards can have up to 19 digits -->
+            </number-length>
+            <number-prefix>
+                <prefix>4</prefix> <!-- Visa always starts with 4 -->
+            </number-prefix>
+        </card-number-settings>
+        <security-code-length>3</security-code-length>
+    </payment-card>
+
+    <payment-card card-type="Amex">
+        <name xml:lang="x-default">American Express</name>
+        <enabled-flag>true</enabled-flag>
+        <card-number-settings>
+            <enable-checksum-verification>true</enable-checksum-verification>
+            <number-length>
+                <length>15</length>
+            </number-length>
+            <number-prefix>
+                <prefix>34</prefix>
+                <prefix>37</prefix>
+            </number-prefix>
+        </card-number-settings>
+        <security-code-length>4</security-code-length>
+    </payment-card>
+
+    <payment-card card-type="Master Card">
+        <name xml:lang="x-default">Master Card</name>
+        <enabled-flag>true</enabled-flag>
+        <card-number-settings>
+            <enable-checksum-verification>true</enable-checksum-verification>
+            <number-length>
+                <length>16</length>
+            </number-length>
+            <number-prefix>
+                <!-- Traditional MasterCard BIN range -->
+                <prefix>51</prefix>
+                <prefix>52</prefix>
+                <prefix>53</prefix>
+                <prefix>54</prefix>
+                <prefix>55</prefix>
+    
+                <!-- Extended range introduced in 2017 -->
+                <prefix>2221</prefix>
+                <prefix>2222</prefix>
+                <prefix>2223</prefix>
+                <prefix>2224</prefix>
+                <prefix>2225</prefix>
+                <prefix>2226</prefix>
+                <prefix>2227</prefix>
+                <prefix>2228</prefix>
+                <prefix>2229</prefix>
+                <prefix>223</prefix>
+                <prefix>224</prefix>
+                <prefix>225</prefix>
+                <prefix>226</prefix>
+                <prefix>227</prefix>
+                <prefix>228</prefix>
+                <prefix>229</prefix>
+                <prefix>23</prefix>
+                <prefix>24</prefix>
+                <prefix>25</prefix>
+                <prefix>26</prefix>
+                <prefix>270</prefix>
+                <prefix>271</prefix>
+                <prefix>2720</prefix>
+            </number-prefix>
+        </card-number-settings>
+        <security-code-length>3</security-code-length>
+    </payment-card>
+    
+
+    <payment-card card-type="Diners">
+        <name xml:lang="x-default">DINERS</name>
+        <enabled-flag>true</enabled-flag>
+        <card-number-settings>
+            <enable-checksum-verification>true</enable-checksum-verification>
+            <number-length>
+                <length>14</length>
+                <length>16</length>
+            </number-length>
+            <number-prefix>
+                <!-- Diners Club International -->
+                <prefix>36</prefix>
+                <prefix>3600</prefix>
+                <prefix>3601</prefix>
+                <prefix>3602</prefix>
+                <prefix>3603</prefix>
+                <prefix>3604</prefix>
+                <prefix>3605</prefix>
+                <prefix>3606</prefix>
+                <prefix>3607</prefix>
+                <prefix>3608</prefix>
+                <prefix>3609</prefix>
+                <prefix>3610</prefix>
+                <prefix>3611</prefix>
+                <prefix>3612</prefix>
+                <prefix>3613</prefix>
+                <prefix>3614</prefix>
+                <prefix>3615</prefix>
+                <prefix>3616</prefix>
+                <prefix>3617</prefix>
+                <prefix>3618</prefix>
+                <prefix>3619</prefix>
+    
+                <!-- Diners Club Carte Blanche and Discover BINs -->
+                <prefix>38</prefix>
+                <prefix>3800</prefix>
+                <prefix>389</prefix>
+    
+                <!-- Newer Diners Club ranges overlapping with Discover -->
+                <prefix>39</prefix>
+                <prefix>3095</prefix>
+            </number-prefix>
+        </card-number-settings>
+        <security-code-length>3</security-code-length>
+    </payment-card>
+    
+    
+    <payment-card card-type="Elo">
+        <name xml:lang="x-default">Elo</name>
+        <enabled-flag>true</enabled-flag>
+        <card-number-settings>
+            <enable-checksum-verification>true</enable-checksum-verification>
+            <number-length>
+                <length>16</length>
+                <length>17</length>
+                <length>18</length>
+                <length>19</length>
+            </number-length>
+            <number-prefix>
+                <prefix>401178</prefix>
+                <prefix>401179</prefix>
+                <prefix>431274</prefix>
+                <prefix>438935</prefix>
+                <prefix>451416</prefix>
+                <prefix>457393</prefix>
+                <prefix>504175</prefix>
+                <prefix>5067</prefix>
+                <prefix>50670</prefix>
+                <prefix>50671</prefix>
+                <prefix>50672</prefix>
+                <prefix>50673</prefix>
+                <prefix>50674</prefix>
+                <prefix>50675</prefix>
+                <prefix>50676</prefix>
+                <prefix>50677</prefix>
+                <prefix>50678</prefix>
+                <prefix>50679</prefix>
+                <prefix>5090</prefix>
+                <prefix>50900</prefix>
+                <prefix>50901</prefix>
+                <prefix>50902</prefix>
+                <prefix>50903</prefix>
+                <prefix>50904</prefix>
+                <prefix>50905</prefix>
+                <prefix>50906</prefix>
+                <prefix>50907</prefix>
+                <prefix>50908</prefix>
+                <prefix>50909</prefix>
+                <prefix>627780</prefix>
+                <prefix>636297</prefix>
+                <prefix>636368</prefix>
+            </number-prefix>
+        </card-number-settings>
+        <security-code-length>3</security-code-length>
+    </payment-card>
+
+    <payment-card card-type="Hipercard">
+        <name xml:lang="x-default">Hipercard</name>
+        <enabled-flag>true</enabled-flag>
+        <card-number-settings>
+            <enable-checksum-verification>true</enable-checksum-verification>
+            <number-length>
+                <length>13</length>
+                <length>14</length>
+                <length>15</length>
+                <length>16</length>
+                <length>17</length>
+                <length>18</length>
+                <length>19</length>
+            </number-length>
+            <number-prefix>
+                <prefix>3841</prefix>
+                <prefix>384104</prefix>
+                <prefix>384106</prefix>
+                <prefix>384109</prefix>
+                <prefix>6038</prefix>
+                <prefix>60382</prefix>
+                <prefix>60384</prefix>
+                <prefix>60385</prefix>
+                <prefix>60386</prefix>
+                <prefix>60387</prefix>
+                <prefix>60388</prefix>
+                <prefix>60389</prefix>
+                <prefix>60390</prefix>
+                <prefix>60391</prefix>
+                <prefix>60392</prefix>
+                <prefix>606282</prefix>
+            </number-prefix>
+        </card-number-settings>
+        <security-code-length>3</security-code-length>
+    </payment-card>
+    
+</payment-settings>

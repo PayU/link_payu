@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<form xmlns="http://www.demandware.com/xml/form/2008-04-19">
+	<field formid="stateCode" label="label.input.state" type="string" mandatory="true" binding="stateCode" missing-error="address.state.missing" value-error="address.field.invalid" parse-error="error.message.required">
+		<options>
+			<option optionid="" 	label="resource.select" 		value=""/>
+            <option optionid="AMA" label="state.pe.amaru" value="AMA"/>
+            <option optionid="ANC" label="state.pe.ankashu" value="ANC"/>
+            <option optionid="APU" label="state.pe.apurimaq" value="APU"/>
+            <option optionid="ARE" label="state.pe.ariqipa" value="ARE"/>
+            <option optionid="AYU" label="state.pe.ayaquchu" value="AYU"/>
+            <option optionid="CAJ" label="state.pe.qajamarka" value="CAJ"/>
+            <option optionid="CUS" label="state.pe.kusku" value="CUS"/>
+            <option optionid="CAL" label="state.pe.qallaw" value="CAL"/>
+            <option optionid="HUV" label="state.pe.wankawelika" value="HUV"/>
+            <option optionid="HUC" label="state.pe.wanuku" value="HUC"/>
+            <option optionid="ICA" label="state.pe.ika" value="ICA"/>
+            <option optionid="JUN" label="state.pe.junin" value="JUN"/>
+            <option optionid="LAL" label="state.pe.qispi_kay" value="LAL"/>
+            <option optionid="LAM" label="state.pe.lampalliqi" value="LAM"/>
+            <option optionid="LIM" label="state.pe.lima" value="LIM"/>
+            <option optionid="LOR" label="state.pe.luritu" value="LOR"/>
+            <option optionid="MDD" label="state.pe.mayutata" value="MDD"/>
+            <option optionid="MOQ" label="state.pe.moqwegwa" value="MOQ"/>
+            <option optionid="PAS" label="state.pe.pasqu" value="PAS"/>
+            <option optionid="PIU" label="state.pe.piwra" value="PIU"/>
+            <option optionid="PUN" label="state.pe.puno" value="PUN"/>
+            <option optionid="SAM" label="state.pe.san_martin" value="SAM"/>
+            <option optionid="TAC" label="state.pe.taqna" value="TAC"/>
+            <option optionid="TUM" label="state.pe.tumpis" value="TUM"/>
+            <option optionid="UCA" label="state.pe.ukayali" value="UCA"/>
+            
+			<!-- Other -->
+			<!-- <option optionid="OTHER" label="state.us.other" 				value="OTHER"/> -->
+		</options>
+	</field>
+</form>

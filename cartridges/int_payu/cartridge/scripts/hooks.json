@@ -1,0 +1,148 @@
+{
+    "hooks": [
+        {
+            "name": "app.payment.processor.pay_u",
+            "script": "./hooks/payment/processor/payu"
+        },
+
+        {
+            "name": "app.payment.processor.pay_u_cash",
+            "script": "./hooks/payment/processor/payu_cash"
+        },
+
+        {
+            "name": "app.payment.form.processor.boleto_bancario",
+            "script": "./hooks/payment/processor/boleto_bancario_form_processor"
+        },
+        {
+            "name": "app.payment.processor.boleto_bancario",
+            "script": "./hooks/payment/processor/boleto_bancario"
+        },
+
+        {
+            "name": "app.payment.form.processor.cobro_express",
+            "script": "./hooks/payment/processor/cobro_express_form_processor"
+        },
+        {
+            "name": "app.payment.processor.cobro_express",
+            "script": "./hooks/payment/processor/cobro_express"
+        },
+
+
+        {
+            "name": "app.payment.form.processor.pagofacil",
+            "script": "./hooks/payment/processor/pagofacil_form_processor"
+        },
+        {
+            "name": "app.payment.processor.pagofacil",
+            "script": "./hooks/payment/processor/pagofacil"
+        },
+
+        
+        {
+            "name": "app.payment.form.processor.pagoefectivo",
+            "script": "./hooks/payment/processor/pagoefectivo_form_processor"
+        },
+        {
+            "name": "app.payment.processor.pagoefectivo",
+            "script": "./hooks/payment/processor/pagoefectivo"
+        },
+
+
+        {
+            "name": "app.payment.form.processor.oxxo",
+            "script": "./hooks/payment/processor/oxxo_form_processor"
+        },
+        {
+            "name": "app.payment.processor.oxxo",
+            "script": "./hooks/payment/processor/oxxo"
+        },
+
+
+        {
+            "name": "app.payment.form.processor.efecty",
+            "script": "./hooks/payment/processor/efecty_form_processor"
+        },
+        {
+            "name": "app.payment.processor.efecty",
+            "script": "./hooks/payment/processor/efecty"
+        },
+
+
+        {
+            "name": "app.payment.form.processor.others_cash",
+            "script": "./hooks/payment/processor/others_cash_form_processor"
+        },
+        {
+            "name": "app.payment.processor.others_cash",
+            "script": "./hooks/payment/processor/others_cash"
+        },
+
+
+        {
+            "name": "app.payment.form.processor.seven_eleven",
+            "script": "./hooks/payment/processor/seven_eleven_form_processor"
+        },
+        {
+            "name": "app.payment.processor.seven_eleven",
+            "script": "./hooks/payment/processor/seven_eleven"
+        },
+
+        {
+            "name": "app.payment.form.processor.others_cash_mx",
+            "script": "./hooks/payment/processor/others_cash_mx_form_processor"
+        },
+        {
+            "name": "app.payment.processor.others_cash_mx",
+            "script": "./hooks/payment/processor/others_cash_mx"
+        },
+
+
+        {
+            "name": "app.payment.form.processor.bank_referenced",
+            "script": "./hooks/payment/processor/bank_referenced_form_processor"
+        },
+        {
+            "name": "app.payment.processor.bank_referenced",
+            "script": "./hooks/payment/processor/bank_referenced"
+        },
+
+        {
+            "name": "app.payment.form.processor.spei",
+            "script": "./hooks/payment/processor/spei_form_processor"
+        },
+        {
+            "name": "app.payment.processor.spei",
+            "script": "./hooks/payment/processor/spei"
+        },
+
+        
+        {
+            "name": "app.payment.form.processor.rapipago",
+            "script": "./hooks/payment/processor/rapipago_form_processor"
+        },
+        {
+            "name": "app.payment.processor.rapipago",
+            "script": "./hooks/payment/processor/rapipago"
+        },
+
+
+        {
+            "name": "app.payment.form.processor.pay_u",
+            "script": "./hooks/payment/processor/payu_form_processor"
+        },
+        {
+            "name": "app.payment.form.processor.pay_u_cash",
+            "script": "./hooks/payment/processor/payu_cash_form_processor"
+        },
+
+        {
+            "name": "app.payment.form.processor.yape",
+            "script": "./hooks/payment/processor/yape_form_processor"
+        },
+        {
+            "name": "app.payment.processor.yape",
+            "script": "./hooks/payment/processor/yape"
+        }
+    ]
+}

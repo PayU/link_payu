@@ -1,0 +1,13 @@
+<!--- applicable credit cards--->
+<div class="tab-pane payu-cash-content seven-eleven-content" id="seven-eleven-content" role="tabpanel">
+    <fieldset class="payment-form-fields">
+        <!--- payment method is credit card --->
+        <input type="hidden" class="form-control"
+               name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+               value="SEVEN_ELEVEN"
+        >
+        <fieldset class="pago-efectivo-form">
+            <isinclude template="checkout/billing/paymentOptions/sevenEleven/sevenElevenForm" />
+        </fieldset>
+    </fieldset>
+</div>

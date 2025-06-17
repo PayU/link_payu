@@ -1,0 +1,56 @@
+<isset name="payUCashFields" value="${pdict.forms.billingForm.payUCashFields}" scope="page"/>
+
+<!--- Hidden input for credit card type --->
+<iscomment> <input type="hidden" class="form-control" id="cardType"
+       name="${payuCashFields.cardType.htmlName}"
+       value=""> </iscomment>
+
+<div class="row">
+     <div class="col-12 ${JSON.stringify(payUCashFields)}">
+        <div class="form-group
+            <isif condition=${payuCashFields.documentType.mandatory === true}>required</isif>
+            ${payuCashFields.documentType.htmlName}">
+            <label class="form-control-label" for="documentType">${Resource.msg('field.document.type','creditCard',null)}</label>
+            <select class="form-control expirationYear custom-select" id="documentType" name="${pdict.forms.billingForm.payUCashFields.documentType.htmlName}"
+                <isprint value=${payuCashFields.documentType.attributes} encoding="off"/>
+                autocomplete="cc-exp-year"
+                aria-describedby="expirationYearInvalidMessage">
+                <iscomment> <option value="${pdict.forms.billingForm.creditCardFields.expirationYear.options[0].htmlValue}">${pdict.forms.billingForm.creditCardFields.expirationYear.options[0].label}</option> </iscomment>
+                <option id="" value="" >
+                    <isprint value="${Resource.msg('field.credit.document.type.select','creditCard',null)}" formatter="####" /></option>
+                <isloop items=${pdict.supportedDocumentTypes} var="documentType">
+                    <isif condition="${documentType.enabled}">
+                        <option id="${documentType.value}" value="${documentType.value}" >
+                            <isprint value="${documentType.description}" formatter="####" />
+                        </option>
+
+                    </isif>
+                </isloop>
+            </select>
+            <div class="invalid-feedback" id="documentTypeInvalidMessage"></div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="form-group
+            <isif condition=${payuCashFields.documentNumber.mandatory === true}>required</isif>
+            ${payuCashFields.documentNumber.htmlName}">
+            <label class="form-control-label" for="documentNumber">${Resource.msg('field.credit.document.number','creditCard',null)}</label>
+            <input type="text" class="form-control documentNumber" id="documentNumber" 
+                name="${pdict.forms.billingForm.payUCashFields.documentNumber.htmlName}"
+                maxlength="${pdict.forms.billingForm.payUCashFields.documentNumber.maxLength}"
+                value="${pdict.order.billing.payment.selectedPaymentInstruments
+                    && pdict.order.billing.payment.selectedPaymentInstruments.length > 0
+                    ? pdict.order.billing.payment.selectedPaymentInstruments[0].documentNumber||''
+                    : ''}"
+                <isprint value=${payuCashFields.documentNumber.attributes} encoding="off"/>
+                autocomplete="cc-name"
+                aria-describedby="cardOwnerInvalidMessage">
+            <div class="invalid-feedback" id="documentNumberInvalidMessage"></div>
+        </div>
+    </div>
+</div>

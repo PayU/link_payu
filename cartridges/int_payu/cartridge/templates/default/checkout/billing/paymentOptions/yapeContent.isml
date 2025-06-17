@@ -1,0 +1,120 @@
+<isset name="yapeFields" value="${pdict.forms.billingForm.yapeFields}" scope="page"/>
+
+   
+    <div class="tab-pane yape-content" id="yape-content" role="tabpanel">
+    <fieldset class="payment-form-fields">
+            <input type="hidden" class="form-control"
+                name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+                value="YAPE"
+            />
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group
+                        <isif condition=${yapeFields.documentType.mandatory === true}>required</isif>
+                        ${yapeFields.documentType.htmlName}">
+                        <label class="form-control-label" for="documentType">${Resource.msg('field.document.type','creditCard',null)}</label>
+                        <select class="form-control expirationYear custom-select" id="documentType" name="${pdict.forms.billingForm.yapeFields.documentType.htmlName}"
+                            <isprint value=${yapeFields.documentType.attributes} encoding="off"/>
+                            autocomplete="documentType"
+                            aria-describedby="documentTypeInvalidMessage">
+                            <option id="" value="" >
+                                <isprint value="${Resource.msg('field.credit.document.type.select','creditCard',null)}" formatter="####" /></option>
+                            <isloop items=${pdict.supportedDocumentTypes} var="documentType">
+                                <isif condition="${documentType.enabled}">
+                                    <option id="${documentType.value}" value="${documentType.value}" >
+                                        <isprint value="${documentType.description}" formatter="####" />
+                                    </option>
+
+                                </isif>
+                            </isloop>
+                        </select>
+                        <div class="invalid-feedback" id="documentTypeInvalidMessage"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+            <div class="col-12">
+                <div class="form-group
+                        <isif condition=${yapeFields.documentNumber.mandatory === true}>required</isif>
+                        ${yapeFields.documentNumber.htmlName}">
+                        <label class="form-control-label" for="documentNumber">${Resource.msg('field.credit.document.number','creditCard',null)}</label>
+                        <input type="text" class="form-control documentNumber" id="documentNumber" 
+                            name="${pdict.forms.billingForm.yapeFields.documentNumber.htmlName}"
+                            maxlength="${pdict.forms.billingForm.yapeFields.documentNumber.maxLength}"
+                            value="${pdict.order.billing.payment.selectedPaymentInstruments
+                                && pdict.order.billing.payment.selectedPaymentInstruments.length > 0
+                                ? pdict.order.billing.payment.selectedPaymentInstruments[0].documentNumber||''
+                                : ''}"
+                            <isprint value=${yapeFields.documentNumber.attributes} encoding="off"/>
+                            autocomplete="document-number"
+                            aria-describedby="cardOwnerInvalidMessage">
+                        <div class="invalid-feedback" id="documentNumberInvalidMessage"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group
+                        <isif condition=${yapeFields.yapePhoneNumber.mandatory === true}>required</isif>
+                        ${yapeFields.yapePhoneNumber.htmlName}">
+                        <label class="form-control-label" for="yapePhoneNumber">
+                            ${Resource.msg('label.yape.phone.number','forms',null)}
+                            <button type="button" class="info-icon">
+                                <span class="icon" aria-hidden="true">?</span>
+                                <span class="sr-only">${Resource.msg('button.help.assistive.text','common',null)}</span>
+                                <span class="tooltip d-none">
+                                    ${Resource.msg('tooltip.yape.phone','forms',null)}
+                                </span>
+                            </button>
+                        </label>
+                        <input type="text" class="form-control yapePhoneNumber" id="yapePhoneNumber" 
+                            name="${pdict.forms.billingForm.yapeFields.yapePhoneNumber.htmlName}"
+                            maxlength="${pdict.forms.billingForm.yapeFields.yapePhoneNumber.maxLength}"
+                            value="${pdict.order.billing.payment.selectedPaymentInstruments
+                                && pdict.order.billing.payment.selectedPaymentInstruments.length > 0
+                                ? pdict.order.billing.payment.selectedPaymentInstruments[0].yapePhoneNumber||''
+                                : ''}"
+                            <isprint value=${yapeFields.yapePhoneNumber.attributes} encoding="off"/>
+                            autocomplete="yape-phone-number"
+                        />
+                        <div class="invalid-feedback" id="yapePhoneNumberInvalidMessage"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group
+                        <isif condition=${yapeFields.yapeCode.mandatory === true}>required</isif>
+                        ${yapeFields.yapeCode.htmlName}">
+                        <label class="form-control-label" for="yapeCode">
+                            ${Resource.msg('label.yape.code','forms',null)}
+                            <button type="button" class="info-icon">
+                                <span class="icon" aria-hidden="true">?</span>
+                                <span class="sr-only">${Resource.msg('button.help.assistive.text','common',null)}</span>
+                                <span class="tooltip d-none">
+                                    ${Resource.msg('tooltip.yape.authorization.code','forms',null)}
+                                </span>
+                            </button>
+                        </label>
+                        <input type="text" class="form-control yapeCode" id="yapeCode" 
+                            name="${pdict.forms.billingForm.yapeFields.yapeCode.htmlName}"
+                            maxlength="${pdict.forms.billingForm.yapeFields.yapeCode.maxLength}"
+                            value="${pdict.order.billing.payment.selectedPaymentInstruments
+                                && pdict.order.billing.payment.selectedPaymentInstruments.length > 0
+                                ? pdict.order.billing.payment.selectedPaymentInstruments[0].yapeCode||''
+                                : ''}"
+                            <isprint value=${yapeFields.yapeCode.attributes} encoding="off"/>
+                        />
+                        <div class="invalid-feedback" id="yapeCodeInvalidMessage"></div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    
+

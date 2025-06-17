@@ -1,0 +1,16 @@
+<!--- applicable credit cards--->
+<div class="tab-pane payu-cash-content pago-efectivo-content" id="pago-efectivo-content" role="tabpanel">
+    <fieldset class="payment-form-fields">
+
+        <!--- payment method is credit card --->
+        <input type="hidden" class="form-control"
+               name="${pdict.forms.billingForm.paymentMethod.htmlName}"
+               value="PAY_U_CASH"
+        >
+
+        <fieldset class="pago-efectivo-form">
+            <isinclude template="checkout/billing/paymentOptions/pagoEfectivoForm" />
+        </fieldset>
+
+    </fieldset>
+</div>

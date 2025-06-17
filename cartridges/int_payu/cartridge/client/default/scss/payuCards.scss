@@ -1,0 +1,129 @@
+.payu-payments {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+    .payment-image {
+        height: 1.8rem;
+    }
+}
+
+.active-tab {
+    border-bottom: 3px solid #000000; /* Green underline for active tab */
+    font-weight: bold;
+    opacity: 1;
+}
+
+.nav-tabs .nav-item a {
+    opacity: 0.7;
+    transition: opacity 0.3s, border-bottom 0.3s;
+}
+
+.nav-tabs .nav-item a:hover {
+    opacity: 1;
+}
+
+.payment-form {
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+
+    /* Firefox */
+    input[type="number"] {
+    -moz-appearance: textfield;
+    }
+}
+
+
+
+.card-number-wrapper {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        right: 3px;
+        background-repeat: no-repeat;
+        background-image: url('../../images/credit.png');
+        background-size: contain;
+
+    }
+
+    &[data-type="visa"]::after {
+        background-image: url('../../images/visa.png');
+        background-size: contain;
+        background-position: center;
+        width: 55px;
+    }
+
+    &[data-type="mastercard"]::after {
+        background-image: url('../../images/payu_mastercard.png');
+        background-size: contain;
+        background-position: center;
+        width: 55px;
+    }
+
+    &[data-type="cabal"]::after {
+        background-image: url('../../images/payu_ar_cabal.png');
+        background-size: contain;
+        background-position: center;
+        width: 55px;
+    }
+
+    &[data-type="cencosud"]::after {
+        background-image: url('../../images/payu_ar_cencosud.png');
+        background-size: contain;
+        background-position: center;
+        width: 55px;
+    }
+
+    &[data-type="argencard"]::after {
+        background-image: url('../../images/payu_ar_argencard.png');
+        background-size: contain;
+        background-position: center;
+        width: 55px;
+    }
+
+    &[data-type="hipercard"]::after {
+        background-image: url('../../images/payu_br_hipercard.png');
+        background-size: contain;
+        background-position: center;
+        width: 55px;
+    }
+
+    &[data-type="elo"]::after {
+        background-image: url('../../images/payu_br_elo.png');
+        background-size: contain;
+        background-position: center;
+        width: 55px;
+    }
+
+    &[data-type="naranja"]::after {
+        background-image: url('../../images/payu_ar_naranja.png');
+        background-size: contain;
+        background-position: center;
+        width: 55px;
+    }
+
+    &[data-type="diners"]::after {
+        background-image: url('../../images/payu_diners.png');
+        background-size: contain;
+        background-position: center;
+        width: 55px;
+    }
+
+    &[data-type="amex"]::after {
+        background-image: url('../../images/amex_logo.png');
+        background-size: auto;
+        background-size: contain;
+        background-position: center;
+        width: 55px;
+    }
+
+    &[data-type="discover"]::after {
+        background-image: url('../../images/payment-types.png');
+        background-size: auto;
+        background-position: -95px -110px;
+    }
+}

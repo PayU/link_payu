@@ -1,0 +1,17 @@
+<isset name="paymentStatus" value="${pdict.order.billing.payment.payUPaymentStatus}" scope="page" />
+
+<isif condition="${paymentStatus}">
+    <div class="payment-status-message mt-2 alert 
+        <isif condition="${paymentStatus == 'Captured'}">alert-success
+        <iselseif condition="${paymentStatus == 'Authorized'}">alert-info
+        <iselseif condition="${paymentStatus == 'Voided'}">alert-danger
+        <iselseif condition="${paymentStatus == 'Refunded'}">alert-warning
+        <iselseif condition="${paymentStatus == 'Pending'}">alert-primary
+        <iselseif condition="${paymentStatus == 'Timeout'}">alert-dark
+        <iselse>alert-secondary</isif>">
+
+        <p class="mb-0">
+            ${Resource.msg('payment.status.' + paymentStatus.toLowerCase(), 'payu', Resource.msg('payment.status.default', 'paymentstatus', null))}
+        </p>
+    </div>
+</isif>

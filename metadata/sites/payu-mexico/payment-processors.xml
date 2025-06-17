@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment-processors xmlns="http://www.demandware.com/xml/impex/paymentprocessor/2007-03-31">
+    <payment-processor processor-id="BANK_REFERENCED">
+        <description>BANK_REFERENCED - PAYU CASH PAYMENT METHOD</description>
+        <preferences>
+            <all-instances/>
+            <development/>
+            <staging/>
+            <production/>
+        </preferences>
+    </payment-processor>
+    <payment-processor processor-id="OTHERS_CASH_MX">
+        <description>OTHERS_CASH_MX - PAYU CASH PAYMENT METHOD</description>
+        <preferences>
+            <all-instances/>
+            <development/>
+            <staging/>
+            <production/>
+        </preferences>
+    </payment-processor>
+
+    <payment-processor processor-id="OXXO">
+        <description>OXXO - PAYU CASH PAYMENT METHOD</description>
+        <preferences>
+            <all-instances/>
+            <development/>
+            <staging/>
+            <production/>
+        </preferences>
+    </payment-processor>
+    <payment-processor processor-id="PAY_U">
+        <preferences>
+            <all-instances/>
+            <development/>
+            <staging/>
+            <production/>
+        </preferences>
+    </payment-processor>
+    <payment-processor processor-id="SEVEN_ELEVEN">
+        <description>SEVEN_ELEVEN - PAYU CASH PAYMENT METHOD</description>
+        <preferences>
+            <all-instances/>
+            <development/>
+            <staging/>
+            <production/>
+        </preferences>
+    </payment-processor>
+
+    <payment-processor processor-id="SPEI">
+        <description>SPEI - PAYU CASH PAYMENT METHOD</description>
+        <preferences>
+            <all-instances/>
+            <development/>
+            <staging/>
+            <production/>
+        </preferences>
+    </payment-processor>
+</payment-processors>
